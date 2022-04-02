@@ -33,6 +33,7 @@
 
 </head>
 
+
 <body>
 
 
@@ -81,14 +82,25 @@
             <div class="col-12 text-center">
                 <h2 class="section-title">AR Shapes Web Application</h2>
                 <!-- Camera -->
+               
+                
+                <!-- The four columns -->
+                
+               
                 <br>
+               
+                <!-- SPHERE -->
                 <div class="embed-responsive embed-responsive-16by9  ">
-                  <iframe class="embed-responsive-item" src="sphere.html" allowfullscreen controls id="myvideo" ></iframe>
+                  <iframe class="embed-responsive-item" src="sphere.html" allowfullscreen controls id="fullscreenapp" ></iframe>
                 </div>
                   <br>
-                  <button onclick="openFullscreen();"  id="example-start-button"class="btn btn-success">Fullscreen Mode</button>
+                  <span class="oi oi-fullscreen-enter"></span>
+                  <button onclick="openFullscreen();"  id="example-start-button"class="btn btn-success " >Fullscreen Mode</button>
                 
                   <p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+                   <!-- SPHERE -->
+                   <!-- change shape button -->
+                  <button id="example-start-button" class="btn btn-success">Cube</button>
              
 
                 <p class="mb-100">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>Excepteur sint occaecat cupidatat non proident</p>
@@ -97,6 +109,7 @@
             <div class="col-sm-6 mb-4">
                 <div class="rounded bg-white p-4 shadow-primary">
                     <i class="ti-layers-alt round-icon blue mb-4"></i>
+                    
                     <h4>Awesome design</h4>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.<br><br>There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                 </div>
@@ -208,7 +221,7 @@
 <!-- Main Script -->
 <script src="js/script.js"></script>
 <script>
-  var elem = document.getElementById("myvideo");
+  var elem = document.getElementById("fullscreenapp");
   function openFullscreen() {
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
@@ -219,5 +232,9 @@
     }
   }
   </script>
+
+
+  
+  
 </body>
 </html>
