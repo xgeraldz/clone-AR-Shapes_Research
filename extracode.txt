@@ -1,0 +1,35 @@
+
+				<ul class="tabs">
+					<li><a href="#tab1"> <img alt="spike" src="assets/spike 3.jpg"
+						width=150" height="70</a></li>
+
+					<li><a href="#tab2"><img alt="spike2" src="assets/spike 5.jpg"
+						width=150" height="70</a></li>
+
+					<li><a href="#tab3"><img alt="spike3" src="assets/spike7.jpg"
+						width=150" height="70</a></li>
+				</ul>
+			
+				<div class="tab_container">
+			
+					<div id="tab1" class="tab_content">
+						<iframe class="embed-responsive-item" src="cube.html" allowfullscreen controls id="fullscreenapp" width="100%" height="800">
+							<p>Your browser does not support iframes.</p>
+						</iframe>
+					
+					</div>
+				
+					<div id="tab2" class="tab_content">
+						<iframe class="embed-responsive-item" src ="sphere.html" allowfullscreen controls id="fullscreenapp"  width="100%" height="800">
+							<p>Your browser does not support iframes.</p>
+						</iframe>
+					</div>
+			
+					<div id="tab3" class="tab_content">
+						<iframe class="embed-responsive-item" src ="cylindar.html" allowfullscreen controls id="fullscreenapp"  width="100%" height="800">
+							<p>Your browser does not support iframes.</p>
+						</iframe>
+					</div>
+			
+				</div>
+			
