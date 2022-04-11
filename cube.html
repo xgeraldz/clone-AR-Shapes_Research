@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    
 <script>
 
@@ -65,51 +65,42 @@
 </script>
 
 
-<style>
-	body {
-	  margin: 0;
-	}
-	.example-container {
-	  overflow: hidden;
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
-	}
-	#example-control-overlay {
-  background: none;
-  height: 30px;
-	}
-	#example-control-overlay >div {
-  position: absolute;
-  right: 0;
-	}
- </style>
+
 
 </head>
 
 <body>
 
 
-<div style="position: absolute; z-index: 1000">
+<div style="position: absolute; z-index: 1000"class="fixed-top" >
+	
+	<button id="example-start-button"class="btn btn-success">Start</button>
+	<button id="example-pause-button"class="btn btn-primary">Pause</button>
+	<button id="example-pause-keep-video-button" class="btn btn-warning">Pause (Keep Video)</button>
+	<button id="example-unpause-button" class="btn btn-info">UnPause</button>
+	<button id="example-stop-button" class="btn btn-danger">Stop</button>
+	
+	
+	<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
 
-	<button id="example-start-button">Start</button>
-	<button id="example-pause-button">Pause</button>
-	<button id="example-pause-keep-video-button">Pause (keep video)</button>
-	<button id="example-unpause-button">UnPause</button>
-	<button id="example-stop-button">Stop</button>
+  
+	
 	  
 </div>
 
 
-<div class="example-container"></div>
-<a-scene mindar-image="imageTargetSrc: ./assets/cubes.mind; maxTrack: 1 filterMinCF:10; filterBeta: 10"  color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" >
+
+
+<a-scene mindar-image="imageTargetSrc:  ./assets/cubes.mind; maxTrack: 1 filterMinCF:.500; filterBeta: 10"  color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"allowfullscreen controls id="fullscreenapp" >
       
 
 	<a-assets>
         
-       	<a-asset-item id="CubeModel" src="./assets/CubeFiles/cubeflattext.gltf"></a-asset-item>
+       	<a-asset-item id="CubeModel" src="./assets/CubeFiles/cubeboxtextured.gltf"></a-asset-item>
+	
       
 	</a-assets>
+
 
 
 	<a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
@@ -118,18 +109,45 @@
 
 	<a-entity mindar-image-target="targetIndex: 0">
         
-    	<a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#CubeModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+    	<a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.003 0.003 0.003" src="#CubeModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
      
 	</a-entity>
 
 
-</a-scene>
-</div>
 
+</a-scene>
+
+
+
+<script>
+	/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+</script>
 
 
 </body>
-
 
 
 </html>
