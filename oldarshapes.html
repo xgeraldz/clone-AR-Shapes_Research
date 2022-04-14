@@ -88,61 +88,19 @@
                 
                
                 <br>
-
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<ul class="nav nav-tabs" id="myTabs">
-								<li class="active"><a href="#home" data-toggle="tab">Home</a>
-								</li>
-								<li><a href="#mps" data-toggle="tab">Sphere </a>
-								</li>
-								<li><a href="#ytb" data-toggle="tab">Cube </a>
-								</li>
-								<li><a href="#rn" data-toggle="tab">Cylinder </a>
-								</li>
-							</ul>
-							<div class="tab-content">
-				
-								<div class="tab-pane active" id="home">
-									<p>Test Tab</p>
-									<p>Boot Tabs on click event</p>
-								</div>
-				
-								<div class="tab-pane" id="mps" data-src="sphere.html" ><br><small></a></small>
-									<iframe class="embed-responsive-item" src ="" allowfullscreen controls id="fullscreenapp" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-									<br>
-                  <p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-				  
-								</div>
-				
-								<div class="tab-pane" id="ytb" data-src="cube.html">
-									<iframe class="embed-responsive-item" src ="" allowfullscreen controls id="fullscreenapp" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-									<br>
-								
-								  
-									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-				  
-								</div>
-				
-				
-								<div class="tab-pane" id="rn" data-src="cylindar.html">
-									<iframe class="embed-responsive-item" src =""allowfullscreen controls id="fullscreenapp"  width="425" height="350" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"></iframe>
-									<br>
-									
-								  
-									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-				  
-								</div>
-
-                
-							</div>
-						</div>
-					</div>
-				</div>
                
-
+                <!-- SPHERE -->
+                <div class="embed-responsive embed-responsive-16by9  ">
+                  <iframe class="embed-responsive-item" src="sphere.html" allowfullscreen controls id="fullscreenapp" ></iframe>
+                </div>
+                  <br>
+                  <span class="oi oi-fullscreen-enter"></span>
+                  <button onclick="openFullscreen();"  id="example-start-button"class="btn btn-success " >Fullscreen Mode</button>
                 
+                  <p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+                   <!-- SPHERE -->
+                   <!-- change shape button -->
+                  <button id="example-start-button" class="btn btn-success">Cube</button>
              
 
                 <p class="mb-100">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>Excepteur sint occaecat cupidatat non proident</p>
@@ -249,24 +207,8 @@
       </nav>
     </div>
   </div>
-
-  
 </footer>
 <!-- /footer -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- jQuery -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -293,89 +235,8 @@
   }
   </script>
 
-<script>
 
-$('#myTabs').click('show', function(e) {  
-    paneID = $(e.target).attr('href');
-    src = $(paneID).attr('data-src');
-    // if the iframe hasn't already been loaded once
-    if($(paneID+" iframe").attr("src")=="")
-    {
-        $(paneID+" iframe").attr("src",src);
-    }
-});
-
-</script>
-
-	
   
-<script>
-	
-	(function() {
   
-  const video = document.querySelector('#basic video');
-  const audio = document.querySelector('#basic audio');
-  
-  const captureVideoButton = document.querySelector('#basic .capture-button');
-  const stopVideoButton = document.querySelector('#basic #stop-button');
-  
-  //Capture Video
-  captureVideoButton.onclick = function() {
-     navigator.mediaDevices.getUserMedia({
-      audio: true,
-      video: true
-    })
-    .then(stream => {
-      window.localStream = stream;
-      video.srcObject = stream;
-      audio.srcObject = stream;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  };
-  
-  stopVideoButton.onclick = function() {
-    localStream.getVideoTracks()[0].stop();
-    video.src = '';
-    
-    localStream.getAudioTracks()[0].stop();
-    audio.src = '';
-  };
-})();
-
-</script>
-
-<script>
-  // Get all elements with class="tabcontent" and hide them
-  var tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 1; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  // <![CDATA[
-  function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    var tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-  // ]]>
-</script>
-
-
-
 </body>
 </html>
