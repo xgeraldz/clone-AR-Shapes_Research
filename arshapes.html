@@ -30,7 +30,121 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <style>
+    
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+     
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+      background-color: #555;
+    }
+    </style>
 
+    <style>
+
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}
+
+    </style>
 </head>
 
 
@@ -79,127 +193,166 @@
     </nav>
   </div>
 </section>
-<!-- /navigation -->
 
-<!-- service -->
-<section class="section-lg service-bg-image position-relative" style="background-image: url(images/backgrounds/service-page.png);">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="section-title">AR Shapes Web Application</h2>
-                <!-- Camera -->
-               
-                <p>
-                  <a class="btn btn-primary collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Sphere
-                  </a>
-                  <a class="btn btn-primary collapsed" data-toggle="collapse1" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
-                    Cube
-                  </a>
-                  <a class="btn btn-primary collapsed" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                    cylinder
-                  </a>
-                  <a class="btn btn-primary collapsed" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                    Cone
-                  </a>
 
-                  <a class="btn btn-primary collapsed" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
-                    Pyramid
-                  </a>
-                  
-                </p>
 
-                <!-- sphere.html -->
+            <section class="section feature mb-0" id="modal">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="sk-folding-cube">
+          <div class="sk-cube1 sk-cube"></div>
+          <div class="sk-cube2 sk-cube"></div>
+          <div class="sk-cube4 sk-cube"></div>
+          <div class="sk-cube3 sk-cube"></div>
+        </div>
+        
+        <i class="spinner"></i><h2 class="section-title" >AR Shapes</h2>
+        
+        <p class="mb-100">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>Excepteur sint occaecat cupidatat non proident</p>
+        <div class="col-lg-12">
+          <!-- about video -->
+          
+         
+          
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+             <div class="about-video ">
+            <img class="img-fluid w-40 " src="images/extras/voxel.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+            <a class="venobox play-btn " href="cone.html" data-vbtype="iframe"><i class="ti-video-camera" data-toggle="tooltip"
+          data-placement="right" title="Tooltip on right"        ></i></a>
+          </div>
+          <br>
+            <h4 a class="d-flex justify-content-center">Cone</h4>
+            <p>Consectetur adipiscing elit donec tempus
+              pellentesque dui.</p>
+          </div>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/skinning morp.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="pyramid.html" data-vbtype="iframe"><i class="ti-video-camera" data-toggle="tooltip"
+            data-placement="right" title="Tooltip on right"></i></a>
+         </div>
+         <br>
+           <h4 a class="d-flex justify-content-center">Pyramid</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
 
-                
-                
-                <!-- The four columns -->
-                
-               
-                <br>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/game fps.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="sphere.html" data-vbtype="iframe"><i class="ti-video-camera" data-toggle="tooltip"
+            data-placement="right" title="Tooltip on right"></i></a>
+         </div>
+         <br>
+         <h4 a class="d-flex justify-content-center">Sphere</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
 
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<ul class="nav nav-tabs" id="myTabs">
-								<li class="active"><a href="#home" data-toggle="tab">Home</a>
-                
-								</li>
-								<li><a href="#s1" data-toggle="tab" >Sphere </a>
-								</li>
-								<li><a href="#s2" data-toggle="tab">Cube </a>
-								</li>
-								<li><a href="#s3" data-toggle="tab">Cylinder </a>
-								</li>
-                <li><a href="#s4" data-toggle="tab">Pyramid</a>
-								</li>
-                <li><a href="#s5" data-toggle="tab">Cone</a>
-								</li>
-							</ul>
-							<div class="tab-content">
-				
-								<div class="tab-pane active" id="home">
-									<p>Test Tab</p>
-									<p>Boot Tabs on click event</p>
-								</div>
-				
-								<div class="tab-pane" id="s1" data-src="sphere.html" ><br><small></a></small>
-									<iframe class="embed-responsive-item" src ="" allowfullscreen controls id="fullscreenapp" width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-									<br>
-                  <p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-				  
-								</div>
-                
-				
-								<div class="tab-pane" id="s2" data-src="cube.html">
-									<iframe class="embed-responsive-item" src ="" allowfullscreen controls id="fullscreenapp" width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-									<br>
-								
-								  
-									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-				  
-								</div>
-				
-				
-								<div class="tab-pane" id="s3" data-src="cylindar.html">
-									<iframe class="embed-responsive-item" src =""allowfullscreen controls id="fullscreenapp"  width="425" height="350" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"></iframe>
-									<br>
-									
-								  
-									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-				  
-								</div>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/Minecraft.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="cylindar.html" data-vbtype="iframe"><i class="ti-video-camera" data-toggle="tooltip"
+            data-placement="right" title="Tooltip on right"></i></a>
+         </div>
+         <br>
+         <h4 a class="d-flex justify-content-center">Cylindar</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
 
-                <div class="tab-pane" id="s4" data-src="pyramid.html">
-									<iframe class="embed-responsive-item" src =""allowfullscreen controls id="fullscreenapp"  width="425" height="350" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"></iframe>
-									<br>
-									
-								  
-									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-				  
-								</div>
+         
 
-                <div class="tab-pane" id="s5" data-src="cone.html">
-									<iframe class="embed-responsive-item" src =""allowfullscreen controls id="fullscreenapp"  width="425" height="350" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"></iframe>
-									<br>
-									
-								  
-									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-				  
-								</div>
+        </div>
+      </div>
 
-                
-							</div>
-						</div>
-					</div>
-				</div>
-               
 
-                
-             
+      <!--Robot dancing-->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/cube.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="cube.html" data-vbtype="iframe"><i class="ti-video-camera" data-toggle="tooltip"
+            data-placement="right" title="Tooltip on right"></i></a>
+         </div>
+         <br>
+         <h4 a class="d-flex justify-content-center">Cube</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
 
-                <p class="mb-100">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>Excepteur sint occaecat cupidatat non proident</p>
-            </div>
+         
+
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/sphere-min.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_lightprobe_cubecamera.html" data-vbtype="iframe"><i class="ti-video-camera" data-toggle="tooltip"
+            data-placement="right" title="Tooltip on right"></i></a>
+         </div>
+         <br>
+           <h4>Sphere Rotate</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+         
+
+        </div>
+      </div>
+
+
+
+      <div class="col-12 text-center">
+        <a href="index.html" class="btn btn-primary">Open more Extra</a>
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+  <img class="feature-bg-1 up-down-animation" src="images/background-shape/feature-bg-1.png" alt="bg-shape">
+  <img class="feature-bg-2 left-right-animation" src="images/background-shape/feature-bg-2.png" alt="bg-shape">
+</section>
+
+
+
+            
             <!-- service item -->
             <div class="col-sm-6 mb-4">
                 <div class="rounded bg-white p-4 shadow-primary">
@@ -259,6 +412,144 @@
     <img class="service-bg-5 up-down-animation" src="images/background-shape/team-bg-triangle.png" alt="">
 </section>
 <!-- /service -->
+
+<section class="section feature mb-0" id="modal">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Extras</h2>
+        <p class="mb-100">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>Excepteur sint occaecat cupidatat non proident</p>
+        <div class="col-lg-12">
+          <!-- about video -->
+          
+
+          
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+             <div class="about-video">
+            <img class="img-fluid w-40" src="images/extras/voxel.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+            <a class="venobox play-btn" href="three.js-dev/examples/webgl_interactive_voxelpainter.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+          </div>
+          <br>
+            <h4>Voxel Painter</h4>
+            <p>Consectetur adipiscing elit donec tempus
+              pellentesque dui.</p>
+          </div>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/skinning morp.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_animation_skinning_morph.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>Skinning Morp</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/game fps.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/games_fps.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>FPS game</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/Minecraft.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_geometry_minecraft.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>Minecraft</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+         
+
+        </div>
+      </div>
+
+
+      <!--Robot dancing-->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/cube.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_materials_texture_canvas.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>Robot Dancing</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+         
+
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/sphere-min.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_lightprobe_cubecamera.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>Sphere Rotate</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+         
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+  <img class="feature-bg-1 up-down-animation" src="images/background-shape/feature-bg-1.png" alt="bg-shape">
+  <img class="feature-bg-2 left-right-animation" src="images/background-shape/feature-bg-2.png" alt="bg-shape">
+</section>
 
 <!-- footer -->
 <footer class="footer-section footer" style="background-image: url(images/backgrounds/footer-bg.png);">
@@ -428,8 +719,39 @@ $('#myTabs').click('show', function(e) {
   }
   // ]]>
 </script>
+<script>$(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});</script>
 
+<!-- button to top -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+<div style="background-color:black;color:white;padding:30px">Scroll Down</div>
+<div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
+  <strong>when the user starts to scroll the page</strong>.</div>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<!-- button to top  end-->
 
 </body>
 </html>
