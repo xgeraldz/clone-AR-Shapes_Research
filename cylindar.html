@@ -91,12 +91,12 @@
 
 
 
-<a-scene mindar-image="imageTargetSrc:  ./assets/cylinders.mind; maxTrack: 1 filterMinCF:10.; filterBeta: 10"  color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"  allowfullscreen controls id="fullscreenapp">
+<a-scene mindar-image="imageTargetSrc:  ./assets/cylinders.mind; maxTrack: 1 filterMinCF:.005; filterBeta: 0.5"  color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"  allowfullscreen controls id="fullscreenapp">
       
 
 	<a-assets>
         
-       	<a-asset-item id="cylinderModel" src="./assets/cylinderfiles/cylinderflatext.gltf"></a-asset-item>
+       	<a-asset-item id="cylinderModel" src="./assets/cylinderfiles/cylindertexture2.gltf"></a-asset-item>
 	
       
 	</a-assets>
@@ -109,7 +109,7 @@
 
 	<a-entity mindar-image-target="targetIndex: 0">
         
-    	<a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#cylinderModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+    	<a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.01 0.01 0.01" src="#cylinderModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
      
 	</a-entity>
 
